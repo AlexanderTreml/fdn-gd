@@ -16,7 +16,7 @@
             }
         },
         {
-            "label": "build-godot-cpp",
+            "label": "build-godot-cpp [debug]",
             "type": "shell",
             "command": "scons target=template_debug",
             "dependsOrder": "sequence",
@@ -32,26 +32,11 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "top-level-dir",
+            "label": "build-godot-cpp [release]",
             "type": "shell",
-            "command": "cd ..",
+            "command": "scons target=template_release",
             "dependsOrder": "sequence",
-            "dependsOn":["godot-cpp-dir", "build-godot-cpp"],
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            }
-        },
-        {
-            "label": "initial-build-extension",
-            "type": "shell",
-            "command": "scons target=template_debug",
-            "dependsOrder": "sequence",
-            "dependsOn":["godot-cpp-dir", "build-godot-cpp", "top-level-dir"],
+            "dependsOn":["godot-cpp-dir"],
             "presentation": {
                 "echo": true,
                 "revealProblems": "onProblem",
@@ -63,7 +48,21 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-extension",
+            "label": "build-extension [release]",
+            "type": "shell",
+            "command": "scons target=template_release",
+            "presentation": {
+                "echo": true,
+                "revealProblems": "onProblem",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-extension [debug]",
             "type": "shell",
             "command": "scons target=template_debug",
             "presentation": {
@@ -77,9 +76,9 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-extension [dev build]", // or the pat 
+            "label": "build-extension [dev build]",
             "type": "shell",
-            "command": "scons target=template_debug dev_build=yes",
+            "command": "scons target=template_debug dev_build=yes debug_symbols=yes",
             "presentation": {
                 "echo": true,
                 "revealProblems": "onProblem",

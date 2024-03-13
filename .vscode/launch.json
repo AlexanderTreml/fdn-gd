@@ -5,14 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-			"name": "Run Demo [FROM EDITOR] - [DEBUG MODE]",
+			"name": "Run Demo [EDITOR] - [DEBUG MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "PATH TO GODOT",
 			"args": [
 				"--editor",
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/demo",
 				"--verbose",
 				"--debug",
 				"--stdout"
@@ -23,13 +23,13 @@
 			"console": "internalConsole",
 		},
         {
-			"name": "Run Demo [FROM GAME] - [DEBUG MODE]",
+			"name": "Run Demo [NO EDITOR] - [DEBUG MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "PATH TO GODOT",
 			"args": [
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/demo",
 				"--verbose",
 				"--debug",
 				"--stdout"
@@ -40,14 +40,14 @@
 			"console": "internalConsole",
 		},
         {
-			"name": "Run Demo [FROM EDITOR] - [TEST MODE]",
+			"name": "Run Demo [EDITOR] - [TEST MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "PATH TO GODOT",
 			"args": [
 				"--editor",
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/demo",
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -55,13 +55,13 @@
 			"console": "internalConsole",
 		},
         {
-			"name": "Run Demo [FROM GAME] - [TEST MODE]",
+			"name": "Run Demo [NO EDITOR] - [TEST MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "PATH TO GODOT",
 			"args": [
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/demo",
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",

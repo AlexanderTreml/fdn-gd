@@ -1,0 +1,10 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://ch1e1j8v1kafa"]
+
+[sub_resource type="FDN" id="FDN_gay4i"]
+delay_lines = 8
+t_60 = 3.02
+resource_name = "FDN"
+
+[resource]
+bus/0/effect/0/effect = SubResource("FDN_gay4i")
+bus/0/effect/0/enabled = true
